@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}My Site{% endblock %}</title>
+  <style>
+    nav { background: #333; padding: 1em; }
+    nav a { color: white; margin-right: 1em; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/announcements/">Announcements</a>
+  </nav>
+  <div class="content">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

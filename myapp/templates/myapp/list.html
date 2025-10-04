@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Announcements{% endblock %}
+{% block content %}
+<h1>Announcements</h1>
+<ul>
+  {% for ann in announcements %}
+    <li>
+      <a href="{% url 'announcement_detail' ann.id %}">{{ ann.title }}</a>
+    </li>
+  {% empty %}
+    <li>No announcements yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
